@@ -21,8 +21,8 @@
     <!-- page content and controls will be here -->
     <div class="container" ng-app="myApp" ng-controller="employeesCtrl">
          <!-- floating button for creating employee -->
-         <div class="fixed-action-btn" style="bottom:45px; right:24px;">
-             <a class="waves-effect waves-light btn modal-trigger btn-floating btn-large red" href="#modal-employee-form" ng-click="showCreateForm()"><i class="large material-icons">add</i>New Employee</a>
+         <div class="fixed-bottom" >
+             <button class="btn btn-primary" ng-click="showCreateForm()" type="button">New Employee</button>
          </div>
          <div class="row">
              <div class="col s12">
@@ -78,11 +78,10 @@
 
 
                          <div class="modal-footer">
-                             <a id="btn-create-employee" class="btn btn-primary" ng-click="createEmployee()"><i class="material-icons left">add</i>Create</a>
-
-                             <a id="btn-update-employee" class="btn btn-primary" ng-click="updateEmployee()"><i class="material-icons left">edit</i>Save Changes</a>
-
-                             <a class="btn btn-default" ng-click="closeDialog()"><i class="material-icons left">close</i>Close</a>
+                             <button id="btn-create-employee" class="btn btn-primary" ng-click="createEmployee()" type="button">Create</button>
+                             <button id="btn-update-employee" class="btn btn-primary" ng-click="updateEmployee()" type="button">Save Changes</button>
+                             <button id="btn-update-employee" class="btn btn-default" ng-click="closeDialog()" type="button">Close</button>
+                             
                          </div>
 
                      </div>

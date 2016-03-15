@@ -51,7 +51,7 @@ $scope.clearForm = function(){
 $scope.createEmployee = function(){
        
     // fields in key-value pairs
-    $http.post('create_employee.php', {
+    $http.post('php/actions/create_employee.php', {
             'name' : $scope.name, 
             'dept' : $scope.dept, 
             'salary' : $scope.salary
@@ -74,7 +74,7 @@ $scope.createEmployee = function(){
 
 // read employees
 $scope.getAll = function(){
-    $http.get("read_employees.php").success(function(response){
+    $http.get("php/actions/read_employees.php").success(function(response){
         $scope.names = response.records;
     });
 }
@@ -91,7 +91,7 @@ $scope.readOne = function(id){
     $('#btn-create-employee').hide();
      
     // post id of employee to be edited
-    $http.post('read_one.php', {
+    $http.post('php/actions/read_one.php', {
         'id' : id 
     })
     .success(function(data, status, headers, config){
@@ -112,7 +112,7 @@ $scope.readOne = function(id){
 
 // update employee record / save changes
 $scope.updateEmployee = function(){
-    $http.post('update_employee.php', {
+    $http.post('php/actions/update_employee.php', {
         'id' : $scope.id,
         'name' : $scope.name, 
         'dept' : $scope.dept, 
@@ -139,7 +139,7 @@ $scope.deleteEmployee = function(id){
     // ask the user if he is sure to delete the record
     if(confirm("Are you sure?")){
         // post the id of employee to be deleted
-        $http.post('delete_employee.php', {
+        $http.post('php/actions/delete_employee.php', {
             'id' : id
         }).success(function (data, status, headers, config){
              

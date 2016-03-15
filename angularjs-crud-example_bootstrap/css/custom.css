@@ -26,3 +26,8 @@
     -webkit-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     cursor: pointer;
 }
+
+.fixed-bottom{
+    position: fixed; top: 5px; left: 200px;
+}
+  
